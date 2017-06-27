@@ -1,15 +1,18 @@
-//Created by Lauren on 6/27/2017
+// **Created by Lauren on 6/27/2017**
+//Reverse a given array and return it
 
 function digitize(n){
     var myArr = Array.from(n);
     var reverseArr = new Array(n.length);
-    console.log("myArr [" + myArr + "]");
-    for (var i=0; i<n.length; i++){
-        var last = myArr.pop(-1);
-        reverseArr[i] = last;
+    document.getElementsByTagName("p").innerHTML = "myArr [" + myArr + "]";
+    for(var i=0; i<n.length; i++){
+        reverseArr[i] = myArr.pop(-1);
     }
-    console.log("reverseArr [" + reverseArr + "]");
+    document.getElementsByTagName("p").innerHTML = "reverseArr [" + reverseArr + "]";
     return reverseArr;
 }
 
-digitize(String(35231));
+document.getElementById("btn").onclick();{
+    var userText = String(document.getElementById("txt").value);
+    digitize(userText);
+}
