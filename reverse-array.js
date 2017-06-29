@@ -16,3 +16,7 @@ function formSubmit() {
     var txtInput = document.getElementById("txt").value;
     document.getElementById("btn").addEventListener("click", digitize(txtInput));
 }
+
+window.onload = function(){
+    document.getElementById("txt").focus();
+};
