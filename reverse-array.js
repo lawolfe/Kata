@@ -2,12 +2,14 @@
 //Reverse a given array and return it
 
 function digitize(n) {
-    var yourString = Array.from(n);
-    var reverseString = new Array(n.length);
+    var yourArr = Array.from(n);
+    var reverseArr = new Array(n.length);
     for(var i=0; i<n.length; i++) {
-        reverseString[i] = yourString.pop(-1);
+        reverseArr[i] = yourArr.pop(-1);
+        var reversed = String(reverseArr).replace( /,/g,"");
     }
-    document.getElementById("demo").innerHTML = "Reverse: " + reverseString;
+    document.getElementById("demo").innerHTML = "Reverse: " + reversed;
+    return reversed;
 }
 
 function formSubmit() {
